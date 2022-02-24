@@ -12,5 +12,6 @@ int main()
     }
     sort(arr,arr + 5);
     cout<<sum - arr[5]<<endl<<sum - arr[0];
+    
     return 0;
 }

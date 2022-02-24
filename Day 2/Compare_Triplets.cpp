@@ -32,6 +32,7 @@ int main()
         }
     }
     cout<<alice<<" "<<bob;
+    
     return 0;
 
 }
