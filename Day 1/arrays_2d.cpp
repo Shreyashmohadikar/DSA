@@ -1,5 +1,5 @@
-    #include <bits/stdc++.h>
-    using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
 
 int arr[7][7];
 int sum(int stx , int sty){
