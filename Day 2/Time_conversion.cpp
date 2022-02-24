@@ -3,9 +3,9 @@ using namespace std;
 
 void Time_conversion(string str)
 {
-    int h1 = str[0] - '0';
-    int h2 = str[1] - '0';
-    int hh = (h1*10)+(h2);
+    int h1 = (int)str[0] - '0';
+    int h2 = (int)str[1] - '0';
+    int hh = (h1*10)+(h2%10);
 
     //for "AM"
     if (str[8] == 'A'){
@@ -31,7 +31,8 @@ void Time_conversion(string str)
         }
         else{
             hh = hh + 12;
-            for(int i=0 ; i<=7 ; i++){
+            cout<<hh;
+            for(int i=2 ; i<=7 ; i++){
                 cout<< str[i];
             }
         }
