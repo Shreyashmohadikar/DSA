@@ -14,7 +14,7 @@ int main(){
             arr[j]=arr[j+1];
         }
         arr[n-1]=temp;
-    }
+    } 
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
