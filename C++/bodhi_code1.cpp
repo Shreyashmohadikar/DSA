@@ -1,36 +1,40 @@
+//Counting Sort
+
 #include<bits/stdc++.h>
 using namespace std;
 
-void bagpacker( long long int panther [], long long int hunter){
-    long long int sunglass=panther [0];
-    for(int karizma=0; karizma<hunter; karizma++){
-        sunglass=max(sunglass, panther[karizma]);
+void bagpacker( long long int num[], long long int var){
+    //num = {1 4 7 8 9}, var = 5
+    long long int element=num[0]; 
+    for(int i=0; i<var; i++){
+        element=max(element, num[i]); 
     }
-    int ship[hunter]={0};
-    for(int karizma=0; karizma<hunter; karizma++){
-        ship[panther[karizma]]++;
+    //element = 5
+    int arr[var]={0};//arr={0 0 0 0 0}
+    for(int i=0; i<var; i++){
+        arr[num[i]]++;
     }
-    for(int karizma=1; karizma=sunglass;karizma++){
-        ship[karizma]+=ship[karizma-1];
+    for(int i=1; i<element;i++){
+        arr[i]+=arr[i-1];
     }
-    int kitkat[hunter];
-    for(int karizma=hunter -1; karizma>=0; karizma--){
-        kitkat[--ship[panther[karizma]]]=panther[karizma];
+    int brr[var];
+    for(int i=var-1; i>=0; i--){
+        brr[arr[num[i]]]=num[i];
     }
-    for(int karizma=0; karizma<hunter; karizma++){
-        panther[karizma]=kitkat[karizma];
+    for(int i=0; i<var; i++){
+        num[i]=brr[i];
     }
 }
 int main(){
-    long long int hunter;
-    cin>>hunter;
-    long long int panther[hunter];
-    for(int karizma=0; karizma<hunter ; karizma++){
-        cin>>panther[karizma];
+    long long int var;
+    cin>>var;
+    long long int num[var];
+    for(int i=0; i<var ; i++){
+        cin>>num[i];
     }
-    bagpacker(panther, hunter);
-    for(int karizma=0; karizma<hunter; karizma++){
-        cout<<panther[karizma]<<" ";
+    bagpacker(num, var);
+    for(int i=0; i<var; i++){
+        cout<<num[i]<<" ";
     }
     return 0;
 }

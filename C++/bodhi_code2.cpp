@@ -1,25 +1,32 @@
+//Bubble Sort
+
 #include <bits/stdc++.h>
 using namespace std;
 
 void hinderance (){
-    int australia;
-    cin>>australia;
-    int arrow[australia];
-    for (int django = 0;django<australia; django++){
-        cin>>arrow[django] ;
+    int num;
+    cin>>num;
+    int arr[num];
+    for (int i = 0;i<num; i++){
+        cin>>arr[i] ;
     }
-    int fly = australia-1;
+    int fly = num-1;
     int camp;
-    for(int django = 0;django<australia; django++){
+    for(int i = 0;i<num; i++){
         camp = 0;
         for (int j=0;j=fly;j++){
-            if(arrow[j]>arrow[camp]) {camp= j;}
-        else{swap(arrow[j], arrow[camp]);camp = j;}
+            if(arr[j]>arr[camp]) {
+                camp= j;
+                }
+            else{
+                swap(arr[j], arr[camp]);
+                camp = j;
+                }
         }
         fly--;
     }
-    for(int django = 0;django<australia; django++){
-        cout<<arrow[django]<<" ";
+    for(int i = 0;i<num; i++){
+        cout<<arr[i]<<" ";
     }
 }
 signed main(){
