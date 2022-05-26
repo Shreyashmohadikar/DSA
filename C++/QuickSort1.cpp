@@ -27,4 +27,4 @@ int main()
         cout<<right_arr[i]<<" ";
     }
     return 0; 
-} 
+}
