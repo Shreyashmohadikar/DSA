@@ -42,8 +42,8 @@ void InsertAtPos(Node* &head, int val, int pos){
     for(int i=0; i<pos-1; i++){
             temp = temp->next;
         }
-        // Node* t;
-        // t = temp->next;
+        Node* t;
+        t = temp->next;
         temp->next = n;
         n->next = t;
 }
