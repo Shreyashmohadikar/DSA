@@ -6,20 +6,22 @@ class Node{
     int data;
     Node* next;
 
-    Node(int val){
-        data = val;
-        next = NULL;
-    }
+    // Node(int val){
+    //     data = val;
+    //     next = NULL;
+    // }
 };
 
 void InsertAtHead(Node* &head, int val){
-    Node* n = new Node(val); //create a new node
+    // Node* n = new Node(val); //create a new node
+    Node* n = new Node();
+    n->data = val;
     n->next=head;
     head = n;
 }
 
-void display(Node* head){
-    Node* temp = head;
+void display(Node* temp){
+    // Node* temp = head;
     while(temp != NULL){
         cout<<temp->data<<" ";
         temp = temp->next;

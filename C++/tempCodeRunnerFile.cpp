@@ -1,1 +1,1 @@
-        // cout<<count<<endl;
+    Node* temp = head;
